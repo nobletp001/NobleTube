@@ -1,0 +1,53 @@
+.Globalheader{
+
+    background-color: #fff;
+    height: 50;
+    display: flex;
+    flex: row;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+border-bottom: #c4c2c3 solid 1px;
+  box-shadow: 0 5px 10px rgb(0 0 0 / 0.2);
+    
+}
+.NobleTube{
+   color: #ad343e;
+   font-size: 30px;
+  padding-left: 3rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+}
+.Best{
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+@media only screen and (max-device-width: 667px) {
+    .Best{
+        display: none;
+    }
+}
+
+@media only screen and (max-device-width: 768px) {
+    .Best {
+        display: none;
+    }
+    .NobleTube {
+        padding-left: 10rem;
+    }
+}
+@media only screen and (max-device-width: 992px) {
+    .Best {
+        display: none;
+    }
+}
+
+
+@media only screen and (max-device-width: 667px) {
+   .NobleTube{
+padding-left: 8rem;
+   }
+}

@@ -1,0 +1,106 @@
+.CardContent{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+    border: white 3px solid;
+    background-color: #fff;
+    -moz-box-shadow: 1px 2px 2px 6px #ccc;
+    -webkit-box-shadow: 1px 1px 5px 6px #ccc;
+    box-shadow: 1px 2px 2px 1px #ccc;
+}
+.CardImageBody{
+    flex: 1;
+    height: auto;
+}
+.cardBody{
+    flex: 2;
+    height: auto;
+    margin-left:2rem;
+
+}
+.cardImage{
+    width: 100%;
+    border: white 2px solid;
+}
+.cardTitle{
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    overflow: hidden;
+    text-transform: uppercase;
+}
+.cardChannel{
+     font-size: 1.2rem;
+     font-weight: bold;
+     color: black;
+     font-family: 'Times New Roman', Times, serif;
+     padding-top:-2rem ;
+}
+.cardDescrip{
+     font-size: 1.2rem;
+     font-weight: bold;
+     color: black;
+     font-family: 'Times New Roman',
+     Times,
+     serif;
+     overflow: hidden;
+     padding-top: 2rem;
+}
+.cardDate{
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #ad343e;
+      font-family: 'Times New Roman',
+      Times,
+      serif;
+}
+.link {
+    text-decoration: none;
+}
+
+
+@media only screen and (max-device-width: 667px) {
+    .CardContent {
+        display: inline-block;
+       margin: 1rem auto;
+        overflow: hidden;
+       
+    }
+    .cardTitle {
+        font-size: 1rem;
+        font-weight: bold;
+        color: black;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        overflow: hidden;
+        display: block
+    }
+    .cardChannel {
+        font-size: 1rem;
+        font-weight: bold;
+        color: black;
+        font-family: 'Times New Roman', Times, serif;
+        display: block;
+        text-align: center;
+
+    }
+    .cardDescrip {
+        font-size: 1rem;
+        font-weight: bold;
+        color: black;
+        font-family: 'Times New Roman',
+            Times,
+            serif;
+        overflow: hidden;
+        /* padding-bottom: -10rem; */
+    }
+    .cardDate {
+        font-size: 1rem;
+        font-weight: bold;
+        color:#ad343e;
+        font-family: 'Times New Roman',
+            Times,
+            serif;
+    }
+
+}
