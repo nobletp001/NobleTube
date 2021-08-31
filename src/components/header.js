@@ -49,8 +49,8 @@ axios.get(
       <>
         <div className="header">
           <form className="Form">
-            <div className="input-group  d-flex justify-content-center">
-              <div className="form-outline bg-white  ">
+            <div className="input-group  grid justify-content-center ">
+              <div className="form-outline bg-white col-xs-6 ">
                 <input
                   id="search-input"
                   type="search"
@@ -59,8 +59,8 @@ axios.get(
                   onChange={handleInput}
                 />
                 <label
-                  className="form-label shadow-lg bg-white"
-                  htmlFor="form1 bg-light"
+                  className="form-label shadow-lg "
+                  htmlFor="form1 "
                 >
                   Search
                 </label>
@@ -68,7 +68,7 @@ axios.get(
               <button
                 id="search-button"
                 type="button"
-                className="btn btn-white shadow-lg bg-white"
+                className="btn btn-white shadow-lg bg-white col-xs-2"
                 onClick={(e) => {
                   e.preventDefault();
                   SendData();

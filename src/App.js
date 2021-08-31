@@ -1,15 +1,20 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
-import Header from "./components/header";
 import Global from "./components/Global";
-import Watch from "./components/Watch";
-import NotFound from "./components/NotFound";
+const Header = React.lazy(() => import("./components/header"));
+const Watch = React.lazy(() => import("./components/Watch"));
+const NotFound = React.lazy(() => import("./components/NotFound"));
+const Loader =()=>{
+  return <div> <img src="loading.gif" class="img-fluid" alt="loading"></img></div>
+}
+
 function App() {
   return (
     <div>
       <Global />
       <Router>
+        <Suspense fallback={<Loader/>}>
         <Switch>
           <Route path="/" exact>
             <Header />
@@ -21,6 +26,7 @@ function App() {
            <NotFound/>
           </Route>
         </Switch>
+        </Suspense>
       </Router>
     </div>
   );
