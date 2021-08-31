@@ -12,22 +12,22 @@ const Loader =()=>{
 function App() {
   return (
     <div>
-      <Global />
-      <Router>
-        <Suspense fallback={<Loader/>}>
-        <Switch>
-          <Route path="/" exact>
-            <Header />
-          </Route>
-          <Route path="/watch/:id">
-            <Watch />
-          </Route>
-          <Route >
-           <NotFound/>
-          </Route>
-        </Switch>
-        </Suspense>
-      </Router>
+      <Suspense fallback={<Loader />}>
+        <Global />
+        <Router>
+          <Switch>
+            <Route path="/" exact>
+              <Header />
+            </Route>
+            <Route path="/watch/:id">
+              <Watch />
+            </Route>
+            <Route>
+              <NotFound />
+            </Route>
+          </Switch>
+        </Router>
+      </Suspense>
     </div>
   );
 }
