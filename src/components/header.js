@@ -49,8 +49,8 @@ axios.get(
       <>
         <div className="header">
           <form className="Form">
-            <div className="input-group  grid justify-content-center ">
-              <div className="form-outline bg-white col-xs-6 ">
+            <div className="input-group  row justify-content-center ">
+              <div className="form-outline bg-white col-8   ">
                 <input
                   id="search-input"
                   type="search"
@@ -68,7 +68,7 @@ axios.get(
               <button
                 id="search-button"
                 type="button"
-                className="btn btn-white shadow-lg bg-white col-xs-2"
+                className="btn btn-white shadow-lg bg-white col-2 col-lg-1"
                 onClick={(e) => {
                   e.preventDefault();
                   SendData();
