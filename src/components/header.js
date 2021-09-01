@@ -5,7 +5,11 @@ import axios from 'axios';
 import Welcome from './Welcome';
 export default function Header() {
     const [inputText, setInputText] = React.useState('');
-    const [video, setVideo] = React.useState([]);
+    const [video, setVideo] = React.useState(
+      localStorage.getItem("cartItems")
+        ? JSON.parse(localStorage.getItem("cartItems"))
+        : []
+    );
     const [loading, setLoading] = React.useState(false);
     const [show, setShow] = React.useState(true);
 
@@ -34,6 +38,8 @@ axios.get(
 ).then((res)=>{
   const {items} = res.data;
   setVideo(items)
+  localStorage.setItem("cartItems", JSON.stringify(items));
+  
   // console.log(items)
   setLoading(false)
   setInputText('')

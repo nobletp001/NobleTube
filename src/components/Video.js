@@ -5,7 +5,7 @@ import {  Link } from "react-router-dom";
 export default function Video({ title, channel, dateAdded, thumbnail, description,id }) {
   return (
     <Link to={`/watch/${id}`} className="link">
-      <div className=" w-75 mx-auto ">
+      <div className=" w-75 mx-auto  ">
         <div className="card mb-2 rounded-3 shadow CardContent">
           <img
             src={thumbnail.url}
@@ -13,7 +13,7 @@ export default function Video({ title, channel, dateAdded, thumbnail, descriptio
             alt={title}
           />
           <div className="card-body text-align-center">
-            <div className="card-text  fs-2 cardTitle overflow-hidden">
+            <div className="card-text  fs-2 cardTitle overflow-hidden text-center">
               {title}
             </div>
             <div className="card-text fs-3 text-center cardChannel">
