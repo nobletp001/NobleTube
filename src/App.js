@@ -1,4 +1,4 @@
-import React, { Suspense,useState, useEffect  } from "react";
+import React, { Suspense  } from "react";
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
 import Global from "./components/Global";
