@@ -10,30 +10,21 @@ const NotFound = React.lazy(() => import("./components/NotFound"));
 //   return <div> <img src="loading.gif" class="img-fluid" alt="loading"></img></div>
 // }
 
-function App() {
-  const [Loading, setLoading] = useState(true)
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false)
-    }, 8000);
-  }, [])
 
-  if(Loading){
-    return (
-      <div>
-        <div className="Body">
-          <img
-            src="img.gif"
-            class="img-fluid h-100 w-100"
-            alt="loading"
-          ></img>
-        </div>
-      </div>
-    );
-  }
+
+const Loading =()=>{
+   <div>
+     <div className="Body">
+       <img src="img.gif" class="img-fluid h-100 w-100" alt="loading"></img>
+     </div>
+   </div>;
+}
+function App() {
+ 
+
   return (
     <div  >
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<Loading/>}>
 
       <Global />
       <Router>
